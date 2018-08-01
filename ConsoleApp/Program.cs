@@ -18,6 +18,9 @@ namespace ConsoleApp
             var container = DependencyInjection.CreateContainer();
 
             var app = container.Resolve<IApp>();
+
+            Console.WriteLine("Done!");
+            Console.ReadKey();
         }
     }
 }

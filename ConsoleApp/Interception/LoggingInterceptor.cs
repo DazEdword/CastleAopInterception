@@ -15,7 +15,7 @@ namespace ConsoleApp.Interception
 
         public void Intercept(IInvocation invocation)
         {
-            Console.WriteLine("Intercepted!");
+            Logger.LogMessage(invocation.GetType().Name, invocation.Method.Name, "Calculating stuff.", System.Diagnostics.TraceEventType.Information);
 
             invocation.Proceed();
         }
