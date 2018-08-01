@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator
+namespace SimpleCalculator
 {
-    public class Calculator
+    public class Calculator : ICalculator
     {
-        public decimal Add(decimal x, decimal y) {
+        public virtual decimal Add(decimal x, decimal y) {
             return x + y;
         }
 
-        public decimal Subtract(decimal x, decimal y)
+        public virtual decimal Subtract(decimal x, decimal y)
         {
             return x - y;
         }
