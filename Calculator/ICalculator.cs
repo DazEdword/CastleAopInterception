@@ -1,4 +1,5 @@
-﻿using SimpleCalculator.Interception.Attributes;
+﻿using System;
+using SimpleCalculator.Interception.Attributes;
 
 namespace SimpleCalculator
 {
@@ -6,7 +7,10 @@ namespace SimpleCalculator
     {
         decimal Add(decimal x, decimal y);
         decimal Subtract(decimal x, decimal y);
+
         [DoNotLog]
         decimal Multiply(decimal x, decimal y);
+
+        decimal Divide(decimal x, decimal y);
     }
 }

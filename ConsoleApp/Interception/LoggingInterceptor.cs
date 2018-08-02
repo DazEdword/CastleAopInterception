@@ -20,10 +20,10 @@ namespace ConsoleApp.Interception
             if (invocation.Method.IsPrivate)
             {
                 // Run the intercepted method as normal.
+                Console.WriteLine("(Skipping logging due to private method)");
                 invocation.Proceed();
             }
-            // I'll go through this later, attributes can be used to further augment the
-            // flow of intercepted logic.
+            // Attributes
             else if (AttributeExistsOnMethod<DoNotLog>(invocation))
             {
                 // Run the intercepted method as normal.
@@ -35,7 +35,16 @@ namespace ConsoleApp.Interception
                 // Log and continue
                 Logger.LogMessage(invocation.GetType().Name, invocation.Method.Name, "Calculating stuff.", System.Diagnostics.TraceEventType.Information);
 
-                invocation.Proceed();
+                try
+                {
+                    invocation.Proceed();
+                }
+                // If exception occurs in intercepted method, log exception as well
+                catch (Exception ex)
+                {
+                    Logger.LogMessage(invocation.GetType().Name, invocation.Method.Name, string.Format("Whooops! Error: {0}", ex.Message), System.Diagnostics.TraceEventType.Error);
+                    throw ex;
+                }
             }
         }
 

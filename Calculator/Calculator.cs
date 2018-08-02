@@ -1,5 +1,4 @@
-﻿using SimpleCalculator.Interception.Attributes;
-using System;
+﻿using System;
 
 namespace SimpleCalculator
 {
@@ -23,6 +22,19 @@ namespace SimpleCalculator
             var result = x * y;
             Console.WriteLine(result);
             return result;
+        }
+
+        public decimal Divide(decimal x, decimal y)
+        {
+            try
+            {
+                return x / y;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

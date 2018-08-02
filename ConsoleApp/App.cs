@@ -1,5 +1,5 @@
 ﻿using SimpleCalculator;
-using SimpleCalculator.Interception.Attributes;
+using System;
 
 namespace ConsoleApp
 {
@@ -12,7 +12,15 @@ namespace ConsoleApp
             this.calculator = calculator;
 
             // Operations
-            DoTestOperations();
+            try
+            {
+                DoTestOperations();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(string.Format("Error: {0}", ex.Message));
+            }
+            
         }
 
         public void DoTestOperations()
@@ -20,6 +28,7 @@ namespace ConsoleApp
             calculator.Add(2, 2);
             calculator.Multiply(3, 2);
             calculator.Subtract(1, 1);
+            calculator.Divide(1, 0);
         }
     }
 }
