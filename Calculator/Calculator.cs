@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SimpleCalculator.Interception.Attributes;
+using System;
 
 namespace SimpleCalculator
 {
     public class Calculator : ICalculator
     {
-        public virtual decimal Add(decimal x, decimal y) {
-            return x + y;
+        public decimal Add(decimal x, decimal y) {
+            var result = x + y;
+            Console.WriteLine(result);
+            return result;
         }
 
-        public virtual decimal Subtract(decimal x, decimal y)
+        public decimal Subtract(decimal x, decimal y)
         {
-            return x - y;
+            var result = x - y;
+            Console.WriteLine(result);
+            return result;
+        }
+
+        public decimal Multiply(decimal x, decimal y)
+        {
+            var result = x * y;
+            Console.WriteLine(result);
+            return result;
         }
     }
 }

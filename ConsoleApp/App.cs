@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConsoleApp.DI;
-using SimpleCalculator;
-using SimpleLogger;
+﻿using SimpleCalculator;
+using SimpleCalculator.Interception.Attributes;
 
 namespace ConsoleApp
 {
@@ -15,17 +9,16 @@ namespace ConsoleApp
 
         public App(ICalculator calculator)
         {
-            // Operations
-            
             this.calculator = calculator;
 
+            // Operations
             DoTestOperations();
         }
 
         public void DoTestOperations()
         {
             calculator.Add(2, 2);
-
+            calculator.Multiply(3, 2);
             calculator.Subtract(1, 1);
         }
     }
