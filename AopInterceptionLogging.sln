@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{4D3105A4-77E6-4832-8F23-05B0C0261152}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopUnitTests", "AopUnitTests\AopUnitTests.csproj", "{C65645E3-9637-4885-9FAA-5F111D7D565C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D3105A4-77E6-4832-8F23-05B0C0261152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D3105A4-77E6-4832-8F23-05B0C0261152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D3105A4-77E6-4832-8F23-05B0C0261152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65645E3-9637-4885-9FAA-5F111D7D565C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65645E3-9637-4885-9FAA-5F111D7D565C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65645E3-9637-4885-9FAA-5F111D7D565C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65645E3-9637-4885-9FAA-5F111D7D565C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
