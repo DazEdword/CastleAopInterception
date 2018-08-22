@@ -14,6 +14,8 @@ namespace ConsoleApp
 
             var app = container.Resolve<IApp>();
 
+            container.Dispose();
+
             Console.WriteLine("Done!");
             Console.ReadKey();
         }
