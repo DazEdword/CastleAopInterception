@@ -17,7 +17,7 @@ namespace ConsoleApp.Interception
         public void Intercept(IInvocation invocation)
         {
             // Only public methods can be logged
-            if (invocation.Method.IsPrivate)
+            if (!invocation.Method.IsPublic)
             {
                 // Run the intercepted method as normal.
                 Console.WriteLine("(Skipping logging due to private method)");
