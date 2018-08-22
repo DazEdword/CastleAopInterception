@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
+    <Compile Include="App\App.cs" />
     <Compile Include="DependencyInjection.cs" />
-    <Compile Include="IApp.cs" />
+    <Compile Include="App\IApp.cs" />
     <Compile Include="Interception\LoggingInterceptor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

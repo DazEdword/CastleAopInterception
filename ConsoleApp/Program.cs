@@ -1,9 +1,5 @@
 using ConsoleApp.DI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -11,8 +7,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press any key to start the app");
-            Console.ReadKey();
+            Console.WriteLine("Starting the calculator app...");
 
             // DI initialisation
             var container = DependencyInjection.CreateContainer();
