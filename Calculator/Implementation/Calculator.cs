@@ -12,14 +12,14 @@ namespace SimpleCalculator
             logger = myLogger;
         }
 
-        public decimal Add(decimal x, decimal y) {
+        public virtual decimal Add(decimal x, decimal y) {
             logger.LogMessage("Calculator", "Add", "Calculating stuff.", System.Diagnostics.TraceEventType.Information);
             var result = x + y;
             Console.WriteLine(result);
             return result;
         }
 
-        public decimal Subtract(decimal x, decimal y)
+        public virtual decimal Subtract(decimal x, decimal y)
         {
             logger.LogMessage("Calculator", "Subtract", "Calculating stuff.", System.Diagnostics.TraceEventType.Information);
             var result = x - y;
@@ -27,7 +27,7 @@ namespace SimpleCalculator
             return result;
         }
 
-        public decimal Multiply(decimal x, decimal y)
+        public virtual decimal Multiply(decimal x, decimal y)
         {
             logger.LogMessage("Calculator", "Multiply", "Calculating stuff.", System.Diagnostics.TraceEventType.Information);
             var result = x * y;
@@ -35,7 +35,7 @@ namespace SimpleCalculator
             return result;
         }
 
-        public decimal Divide(decimal x, decimal y)
+        public virtual decimal Divide(decimal x, decimal y)
         {
             try
             {
