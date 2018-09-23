@@ -1,23 +1,29 @@
-﻿namespace SimpleCalculator
+﻿using SimpleLogger;
+
+namespace SimpleCalculator
 {
-    public class CalculatorFake : ICalculator
+    public class CalculatorFake : Calculator, ICalculator
     {
-        public decimal Add(decimal x, decimal y)
+	    public CalculatorFake(ILogger myLogger) : base(myLogger)
+	    {
+	    }
+
+	    public override decimal Add(decimal x, decimal y)
         {
             return 1000m;
         }
 
-        public decimal Divide(decimal x, decimal y)
+        public override decimal Divide(decimal x, decimal y)
         {
             return 1000m;
         }
 
-        public decimal Multiply(decimal x, decimal y)
+        public override decimal Multiply(decimal x, decimal y)
         {
             return 1000m;
         }
 
-        public decimal Subtract(decimal x, decimal y)
+        public override decimal Subtract(decimal x, decimal y)
         {
             return 1000m;
         }
